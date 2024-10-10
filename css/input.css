@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: url("https://clwebsolution.fr/img/20240104_193627.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.btn-primary {
+    background-color: #40b3ff;
+    border-color: #40b3ff;
+    color: black;
+    border-radius: 100vh;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+}
+
+.btn-primary:hover {
+    background-color: #2f89c5;
+    border-color: #2f89c5;
+}
