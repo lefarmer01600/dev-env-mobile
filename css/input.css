@@ -8,11 +8,6 @@
     /* background-attachment: fixed; */
     background-repeat: no-repeat;
     background-position: center;
-    will-change: transform;
-    transform: scale(1);
-    transition: transform 1s ease, opacity 0.3s ease;
-    height: 100vh;
-    width: 100vw;
     animation: the-animation linear;
     animation-timeline: view();
     animation-iteration-count: 1;
@@ -21,12 +16,14 @@
 
 @keyframes the-animation {
     from  {
-        background-size: cover;
-        border-radius: 0px;
+        transform: scale(1.1);
+        /* background-size: cover;
+        border-radius: 0px; */
     }
     to {
-      background-size: 90%;
-      border-radius: 0px;
+        transform: scale(0.9);
+      /* background-size: 90%;
+      border-radius: 0px; */
 }
 }
 
