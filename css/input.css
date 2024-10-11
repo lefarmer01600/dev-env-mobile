@@ -8,24 +8,34 @@
     /* background-attachment: fixed; */
     background-repeat: no-repeat;
     background-position: center;
+    /* transform: scale(1);
     animation: the-animation linear;
     animation-timeline: view();
-    animation-iteration-count: 1;
+    animation-iteration-count: 1; */
+    animation: header_scale 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -30s);
 
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
 }
 
-@keyframes the-animation {
-    from  {
-        transform: scale(1.1);
-        /* background-size: cover;
-        border-radius: 0px; */
+@keyframes header_scale {
+    to {
+        transform: scale(0.95);
+        border-radius: 50px;
     }
+}
+
+/* @keyframes the-animation {
+    from {
+        transform: scale(1.1);
+    }
+
     to {
         transform: scale(0.9);
-      /* background-size: 90%;
-      border-radius: 0px; */
-}
-}
+    }
+} */
 
 .btn-primary {
     background-color: #40b3ff;
