@@ -1,0 +1,105 @@
+{
+    "quiz": [
+      {
+        "question": "Qu'est-ce que le phishing ?",
+        "choices": [
+          "a) Un logiciel antivirus",
+          "b) Une technique d'attaque consistant à usurper l'identité d'une entité de confiance pour obtenir des informations sensibles",
+          "c) Un système de sauvegarde des données",
+          "d) Une méthode de cryptage des mots de passe"
+        ],
+        "correctAnswer": "b"
+      },
+      {
+        "question": "Quel est le rôle d'un pare-feu dans la cybersécurité ?",
+        "choices": [
+          "a) Protéger les mots de passe",
+          "b) Filtrer le trafic réseau entrant et sortant pour bloquer les connexions non autorisées",
+          "c) Sauvegarder les données importantes",
+          "d) Crypter les fichiers de l'utilisateur"
+        ],
+        "correctAnswer": "b"
+      },
+      {
+        "question": "Quel est l'objectif principal d'un ransomware ?",
+        "choices": [
+          "a) Infecter les fichiers avec des virus",
+          "b) Voler les informations de connexion",
+          "c) Chiffrer les données d'une victime et demander une rançon pour les restaurer",
+          "d) Surveiller les activités en ligne d'un utilisateur"
+        ],
+        "correctAnswer": "c"
+      },
+      {
+        "question": "Quel est le type de cyberattaque qui surcharge un serveur en envoyant une grande quantité de requêtes ?",
+        "choices": [
+          "a) Attaque par déni de service (DDoS)",
+          "b) Attaque de phishing",
+          "c) Attaque par force brute",
+          "d) Attaque par injection SQL"
+        ],
+        "correctAnswer": "a"
+      },
+      {
+        "question": "Lequel de ces éléments est un exemple de mot de passe fort ?",
+        "choices": [
+          "a) '123456'",
+          "b) 'password'",
+          "c) 'M@l2F!_1995'",
+          "d) 'qwerty'"
+        ],
+        "correctAnswer": "c"
+      },
+      {
+        "question": "Qu'est-ce que l'authentification à deux facteurs (2FA) ?",
+        "choices": [
+          "a) Utiliser deux mots de passe différents pour accéder à un compte",
+          "b) Utiliser une question de sécurité en plus d'un mot de passe",
+          "c) Ajouter une étape supplémentaire de vérification (comme un code envoyé par SMS) en plus du mot de passe",
+          "d) Vérifier l'identité de l'utilisateur par deux personnes distinctes"
+        ],
+        "correctAnswer": "c"
+      },
+      {
+        "question": "Que signifie le terme 'cheval de Troie' en cybersécurité ?",
+        "choices": [
+          "a) Un logiciel malveillant qui semble légitime mais qui contient un code malveillant caché",
+          "b) Un programme antivirus",
+          "c) Un fichier corrompu qui endommage les disques durs",
+          "d) Un outil pour protéger les systèmes contre les attaques"
+        ],
+        "correctAnswer": "a"
+      },
+      {
+        "question": "Qu'est-ce qu'une injection SQL ?",
+        "choices": [
+          "a) Une méthode pour protéger une base de données",
+          "b) Une attaque qui insère du code malveillant dans une requête SQL pour manipuler une base de données",
+          "c) Une technique pour crypter les informations d'une base de données",
+          "d) Un moyen d'accéder à une base de données en contournant les mots de passe"
+        ],
+        "correctAnswer": "b"
+      },
+      {
+        "question": "Quelle est la principale fonction du chiffrement ?",
+        "choices": [
+          "a) Sauvegarder les données",
+          "b) Modifier l'apparence des fichiers",
+          "c) Convertir les informations en un format illisible à moins de disposer de la clé de déchiffrement",
+          "d) Détecter les virus sur un système"
+        ],
+        "correctAnswer": "c"
+      },
+      {
+        "question": "Pourquoi est-il important de mettre à jour régulièrement ses logiciels ?",
+        "choices": [
+          "a) Pour améliorer la vitesse de l'ordinateur",
+          "b) Pour ajouter de nouvelles fonctionnalités",
+          "c) Pour corriger des failles de sécurité et prévenir les attaques",
+          "d) Pour obtenir des fichiers plus récents"
+        ],
+        "correctAnswer": "c"
+      }
+    ]
+  }
+  

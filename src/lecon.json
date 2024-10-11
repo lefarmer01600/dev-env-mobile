@@ -1,0 +1,27 @@
+[
+    {
+      "title": "Introduction à la Cybersécurité",
+      "content": "Leçon : Comprendre les bases de la cybersécurité, les menaces et les vulnérabilités."
+    },
+    {
+      "title": "Les types de cyberattaques",
+      "content": "Leçon : Décrire les attaques les plus courantes (phishing, DDOS, malware, etc.)."
+    },
+    {
+      "title": "La Sécurité des Mots de Passe",
+      "content": "Leçon : Comment créer des mots de passe forts, l'importance de la gestion des mots de passe."
+    },
+    {
+      "title": "Phishing et Ingénierie Sociale",
+      "content": "Leçon : Comprendre comment les cybercriminels manipulent les utilisateurs pour voler des informations."
+    },
+    {
+      "title": "Sécurité des Réseaux",
+      "content": "Leçon : Comment les réseaux sont protégés, les concepts de pare-feu, VPN, et segmentation du réseau."
+    },
+    {
+      "title": "Réglementations et Lois en Cybersécurité",
+      "content": "Leçon : Les lois sur la vie privée, comme le RGPD (Règlement Général sur la Protection des Données)."
+    }
+  ]
+  
