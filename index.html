@@ -11,41 +11,48 @@
 
 <body>
     <header>
+        <div class="navbar px-12 fixed z-[1]">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a>Accueil</a></li>
+                        <li><a>À propos</a></li>
+                        <li><a>Leçon</a></li>
+                        <li><a>Jeux</a></li>
+                    </ul>
+                </div>
+                <a id="nav-title" class="btn btn-ghost text-xl text-white">CyberLearning</a>
+            </div>
+            <div class="navbar-center bg-slate-400 rounded-full hidden lg:flex join">
+                <li class="btn btn-secondary join-item"><a>Accueil</a></li>
+                <li class="btn btn-secondary join-item"><a>À propos</a></li>
+                <li class="btn btn-secondary join-item"><a>Leçon</a></li>
+                <li class="btn btn-secondary join-item"><a>Jeux</a></li>
+                <li id="nav-btn-contact" class="btn join-item"><a>Nous contacter</a></li>
+                <!-- <ul class="menu menu-horizontal px-1">
+                    <li><a>Accueil</a></li>
+                    <li><a>À propos</a></li>
+                    <li><a>Leçon</a></li>
+                    <li><a>Jeux</a></li>
+                </ul> -->
+            </div>
+            <div class="navbar-end">
+                <a id="btn-contact" class="btn btn-primary">Nous contacter</a>
+            </div>
+        </div>
+    </header>
+
+    <section>
         <div id="head_bg">
             <div class="bg-black/40">
-                <div class="navbar px-12">
-                    <div class="navbar-start">
-                        <div class="dropdown">
-                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 6h16M4 12h8m-8 6h16" />
-                                </svg>
-                            </div>
-                            <ul tabindex="0"
-                                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                                <li><a>Accueil</a></li>
-                                <li><a>À propos</a></li>
-                                <li><a>Leçon</a></li>
-                                <li><a>Jeux</a></li>
-                            </ul>
-                        </div>
-                        <a class="btn btn-ghost text-xl text-white">CyberLearning</a>
-                    </div>
-                    <div class="navbar-center glass rounded-full hidden lg:flex">
-                        <ul class="menu menu-horizontal px-1">
-                            <li><a>Accueil</a></li>
-                            <li><a>À propos</a></li>
-                            <li><a>Leçon</a></li>
-                            <li><a>Jeux</a></li>
-                        </ul>
-                    </div>
-                    <div class="navbar-end">
-                        <a class="btn btn-primary">Nous contacter</a>
-                    </div>
-                </div>
-
                 <div class="h-screen content-center ml-28">
                     <div class="card glass w-2/5 shadow-xl">
                         <div class="card-body">
@@ -62,7 +69,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
     <section class="h-screen bg-gray-200">
         <div class="grid grid-rows-2 grid-flow-col gap-10 p-20">

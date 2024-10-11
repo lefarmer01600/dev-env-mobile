@@ -3,7 +3,7 @@ window.addEventListener(
     () => {
         document.body.style.setProperty(
             "--scroll",
-            window.scrollY / (document.body.offsetHeight - window.innerHeight)
+            (window.scrollY / (document.body.offsetHeight - window.innerHeight))*-30
         );
     },
     false

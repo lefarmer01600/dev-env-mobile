@@ -5,16 +5,12 @@
 #head_bg {
     background: url("https://clwebsolution.fr/img/20240104_193627.jpg");
     background-size: cover;
-    /* background-attachment: fixed; */
     background-repeat: no-repeat;
     background-position: center;
-    /* transform: scale(1);
-    animation: the-animation linear;
-    animation-timeline: view();
-    animation-iteration-count: 1; */
+
     animation: header_scale 1s linear infinite;
     animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -30s);
+    animation-delay: calc(var(--scroll) * 1s);
 
     animation-iteration-count: 1;
     animation-fill-mode: both;
@@ -22,20 +18,52 @@
 
 @keyframes header_scale {
     to {
-        transform: scale(0.95);
-        border-radius: 50px;
+        transform: scale(0.95) translateY(-10px);
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
     }
 }
 
-/* @keyframes the-animation {
-    from {
-        transform: scale(1.1);
-    }
+#btn-contact, #nav-title {
+    animation: navbar_element 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * 1s);
 
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes navbar_element {
     to {
-        transform: scale(0.9);
+        transform: translateY(-10vh);
     }
-} */
+}
+
+#nav-btn-contact {
+    background-color: #40b3ff;
+    border-color: #40b3ff;
+    color: black;
+    display: none;
+
+    animation: btn_contact 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -30s);
+
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+#nav-btn-contact:hover {
+    background-color: #2f89c5;
+    border-color: #2f89c5;
+}
+
+@keyframes btn_contact {
+    to {
+        display: block;
+    }
+}
+
 
 .btn-primary {
     background-color: #40b3ff;
@@ -49,4 +77,15 @@
 .btn-primary:hover {
     background-color: #2f89c5;
     border-color: #2f89c5;
+}
+
+.btn-secondary {
+    background-color: #00000000;
+    border-color: #00000000;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #00000000;
+    border-color: #0000005d;
 }
