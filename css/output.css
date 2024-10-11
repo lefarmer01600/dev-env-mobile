@@ -2150,6 +2150,16 @@ html {
   border-radius: 9999px;
 }
 
+.rounded-l-full {
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+
+.rounded-r-full {
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+}
+
 .rounded-br-none {
   border-bottom-right-radius: 0px;
 }
@@ -2283,7 +2293,8 @@ html {
   }
 }
 
-#btn-contact, #nav-title {
+#btn-contact,
+#nav-title {
   animation: navbar_element 1s linear infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * 1s);
@@ -2301,10 +2312,17 @@ html {
   background-color: #40b3ff;
   border-color: #40b3ff;
   color: black;
-  display: none;
+  /* visibility: hidden;
+    opacity: 0; */
+  /* transform: translateX(-10vh); */
+  max-width: 0px;
+  text-wrap: nowrap;
+  /* text-overflow: clip; */
+  overflow: hidden;
+  /* width: 0; */
   animation: btn_contact 1s linear infinite;
   animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -30s);
+  animation-delay: calc(var(--scroll) * 0.1s);
   animation-iteration-count: 1;
   animation-fill-mode: both;
 }
@@ -2316,7 +2334,10 @@ html {
 
 @keyframes btn_contact {
   to {
-    display: block;
+    /* visibility: visible;
+        opacity: 100; */
+    /* width: auto; */
+    max-width: 100%;
   }
 }
 
