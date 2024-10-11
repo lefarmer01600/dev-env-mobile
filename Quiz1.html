@@ -1,0 +1,151 @@
+<!DOCTYPE html> 
+<html lang="fr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberLearning</title>
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+
+<body>
+    <header>
+        <div id="head_bg">
+            <div class="bg-black/40">
+                <div class="navbar px-12">
+                    <div class="navbar-start">
+                        <div class="dropdown">
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                <li><a href="index.html">Accueil</a></li>
+                                <li><a href="propos.html">À propos</a></li>
+                                <li><a href="Leçon.html">Leçon</a></li>
+                                <li><a href="jeux.html">Jeux</a></li>
+                            </ul>
+                        </div>
+                        <a class="btn btn-ghost text-xl text-white" href="index.html">CyberLearning</a>
+                    </div>
+                    <div class="navbar-center glass rounded-full hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="propos.html">À propos</a></li>
+                            <li><a href="Leçon.html">Leçon</a></li>
+                            <li><a href="jeux.html">Jeux</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-end">
+                        <a class="btn btn-primary">Nous contacter</a>
+                    </div>
+                </div>
+
+                <div class="h-screen content-center ml-28">
+                    <div class="card glass w-2/5 shadow-xl">
+                        <div class="card-body">
+                            <h2 class="card-title text-6xl text-white pb-10">Introduction à 
+                                la Cybersécurité
+                            </h2>
+                            <p class="text-white text-xl pb-10">Leçon : Comprendre les bases de la cybersécurité, 
+                                les menaces et les vulnérabilités.</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Commencer</button>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-10">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold">Quiz : Introduction à la Cybersécurité</h1>
+        </div>
+        <p>Avant de commencer, veuillez indiquer votre nom ou votre pseudo</p>
+            <input type="text" name="name" size="20">
+      
+            <h3>Question 1</h3>
+            <strong> Qu'est-ce que le phishing ?</strong><br>
+            <input type="radio" name="question1" value="1"> Un logiciel antivirus<br>
+            <input type="radio" name="question1" value="2"> Une technique d'attaque consistant à usurper l'identité d'une entité de confiance pour obtenir des informations sensibles<br>
+            <input type="radio" name="question1" value="3"> Un système de sauvegarde des données.
+            <input type="radio" name="question1" value="4"> Une méthode de cryptage des mots de passe.
+      
+            <h3>Question 2</h3>
+            <strong>Quel est le rôle d'un pare-feu dans la cybersécurité ?</strong><br>
+            <input type="radio" name="question2" value="1">Protéger les mots de passe.<br>
+            <input type="radio" name="question2" value="2">Filtrer le trafic réseau entrant et sortant pour bloquer les connexions non autorisées<br>
+            <input type="radio" name="question2" value="3">Sauvegarder les données importantes.<br> 
+            <input type="radio" name="question2" value="4"> Crypter les fichiers de l'utilisateur. <br>
+      
+            <h3>Question 3</h3>
+            <strong>Quel est l'objectif principal d'un ransomware ?</strong><br>
+            <input type="radio" name="question3" value="1">Infecter les fichiers avec des virus.<br>
+            <input type="radio" name="question3" value="2">Voler les informations de connexion.<br>
+            <input type="radio" name="question3" value="3">Chiffrer les données d'une victime et demander une rançon pour les restaurer<br>
+            <input type="radio" name="question3" value="4">Surveiller les activités en ligne d'un utilisateur.<br>
+      
+            <h3>Question 4</h3>
+            <strong>Surveiller les activités en ligne d'un utilisateur</strong><br>
+            <input type="radio" name="question4" value="1">Attaque par déni de service (DDoS).<br>
+            <input type="radio" name="question4" value="2">Attaque de phishing.<br>
+            <input type="radio" name="question4" value="3">Attaque par force brute.<br>
+            <input type="radio" name="question4" value="4"> Attaque par injection SQL.<br>
+            
+             <h3>Question 5</h3>
+            <strong>Lequel de ces éléments est un exemple de mot de passe fort ?</strong><br>
+            <input type="radio" name="question5" value="1">"123456"<br>
+            <input type="radio" name="question5" value="2">"password"<br>
+            <input type="radio" name="question5" value="3">"M@l2F!_1995"<br>
+            <input type="radio" name="question5" value="4"> "qwerty"
+            
+              <h3>Question 6</h3>
+            <strong>Qu'est-ce que l'authentification à deux facteurs (2FA) ?</strong><br>
+            <input type="radio" name="question6" value="1">Utiliser deux mots de passe différents pour accéder à un compte. <br>
+            <input type="radio" name="question6" value="2">Utiliser une question de sécurité en plus d'un mot de passe.<br>
+            <input type="radio" name="question6" value="3"> Ajouter une étape supplémentaire de vérification (comme un code envoyé par SMS) en plus du mot de passe. <br>
+            <input type="radio" name="question6" value="4"> Vérifier l'identité de l'utilisateur par deux personnes distinctes.
+            
+             <h3>Question 7</h3>
+            <strong>Que signifie le terme "cheval de Troie" en cybersécurité ?</strong><br>
+            <input type="radio" name="question7" value="1">Un logiciel malveillant qui semble légitime mais qui contient un code malveillant caché. <br>
+            <input type="radio" name="question7" value="2">Un programme antivirus.<br>
+            <input type="radio" name="question7" value="3">Un fichier corrompu qui endommage les disques durs.<br>
+            <input type="radio" name="question7" value="4"> Un outil pour protéger les systèmes contre les attaques
+            
+            <h3>Question 8</h3>
+            <strong>quel terme utilise-t-on pour nommer une image?</strong><br>
+            <input type="radio" name="question8" value="1">img<br>
+            <input type="radio" name="question8" value="2">alt<br>
+            <input type="radio" name="question8" value="3">src<br>
+            <input type="radio" name="question8" value="4"> Une méthode de cryptage des mots de passe.
+
+            <h3>Question 9</h3>
+            <strong>quel terme utilise-t-on pour nommer une image?</strong><br>
+            <input type="radio" name="question9" value="1">img<br>
+            <input type="radio" name="question9" value="2">alt<br>
+            <input type="radio" name="question9" value="3">src<br>
+            <input type="radio" name="question9" value="4"> Une méthode de cryptage des mots de passe.
+            
+            <h3>Question 10</h3>
+            <strong>quel terme utilise-t-on pour nommer une image?</strong><br>
+            <input type="radio" name="question10" value="1">img<br>
+            <input type="radio" name="question10" value="2">alt<br>
+            <input type="radio" name="question10" value="3">src<br>
+            <input type="radio" name="question10" value="4"> Une méthode de cryptage des mots de passe.
+            
+            <br>
+            <input type="submit" value="Envoyer les réponses">
+          </form>
+
+        
+    </main>
+</body>
+
+</html>
