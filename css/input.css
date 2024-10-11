@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+#head_bg {
     background: url("https://clwebsolution.fr/img/20240104_193627.jpg");
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-repeat: no-repeat;
 }
 

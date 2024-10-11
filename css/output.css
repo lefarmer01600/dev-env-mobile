@@ -1922,14 +1922,6 @@ html {
   height: 100vh;
 }
 
-.h-96 {
-  height: 24rem;
-}
-
-.h-full {
-  height: 100%;
-}
-
 .min-h-60 {
   min-height: 15rem;
 }
@@ -1948,10 +1940,6 @@ html {
 
 .w-full {
   width: 100%;
-}
-
-.w-96 {
-  width: 24rem;
 }
 
 .max-w-xs {
@@ -1982,10 +1970,6 @@ html {
   justify-content: flex-end;
 }
 
-.justify-center {
-  justify-content: center;
-}
-
 .gap-10 {
   gap: 2.5rem;
 }
@@ -2006,6 +1990,26 @@ html {
   border-bottom-right-radius: 0px;
 }
 
+.bg-\[\#91b0ff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(145 176 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#91d3ff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(145 211 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#9591ff\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(149 145 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#E5F5FF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 245 255 / var(--tw-bg-opacity));
+}
+
 .bg-base-100 {
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
@@ -2018,43 +2022,6 @@ html {
 .bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
-.bg-\[\] {
-  background-color: ;
-}
-
-.bg-\[\#\] {
-  background-color: #;
-}
-
-.bg-\[\#9591ff\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(149 145 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#91d3ff\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(145 211 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#91ffe4\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(145 255 228 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#E\] {
-  background-color: #E;
-}
-
-.bg-\[\#E5F5FF\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 245 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#91b0ff\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(145 176 255 / var(--tw-bg-opacity));
 }
 
 .p-14 {
@@ -2096,11 +2063,6 @@ html {
   line-height: 2rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -2132,10 +2094,10 @@ html {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-body {
+#head_bg {
   background: url("https://clwebsolution.fr/img/20240104_193627.jpg");
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-repeat: no-repeat;
 }
 
