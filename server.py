@@ -3,9 +3,13 @@ from flask import *
 app = Flask(__name__)
 
 leçon = {}
+quiz_question = {}
 
 with open('src/lecon.json', 'r', encoding='utf8') as file:
     leçon = json.load(file)
+
+with open('src/quiz.json', 'r', encoding='utf8') as file:
+    quiz_question = json.load(file)
 
 @app.route('/')
 def home():
@@ -22,3 +26,10 @@ def lecon():
 def jeux():
     # return render_template('home.html', question=question)
     return render_template('jeux.html')
+
+@app.route('/quiz')
+def quiz():
+    global quiz_question
+    i = 0
+    # return render_template('home.html', question=question)
+    return render_template('Quiz1.html', data=quiz_question["quiz"], i=i)
