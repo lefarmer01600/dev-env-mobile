@@ -2777,8 +2777,8 @@ html {
 @keyframes header_scale {
   to {
     transform: scale(0.95) translateY(-10px);
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 99999px;
+    border-bottom-right-radius: 99999px;
   }
 }
 

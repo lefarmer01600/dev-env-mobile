@@ -27,12 +27,27 @@ def jeux():
     # return render_template('home.html', question=question)
     return render_template('jeux.html')
 
-@app.route('/quiz')
+@app.route('/quiz', methods=['GET'])
 def quiz():
     global quiz_question
-    i = 1
+    i = 0
+    #make i = to the get parameter
+    if request.args.get('page'):
+        i = request.args.get('page')
+
     # return render_template('home.html', question=question)
     return render_template('Quiz1.html', data=quiz_question["quiz"], i=i)
+
+@app.route('/page', methods=['POST'])
+def submit():
+    global quiz_question
+    i = 1
+    score = 0
+    for question in quiz_question["quiz"]:
+        if request.form[str(i)] == question["answer"]:
+            score += 1
+        i += 1
+    return render_template('Quiz1.html', data=quiz_question["quiz"], i=i, score=score)
 
 @app.route('/test')
 def test():

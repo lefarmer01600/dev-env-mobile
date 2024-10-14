@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberLearning</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
+
+    <script>
+        // make a function to send page +1 to the server with get
+        function nextPage() {
+            // get the current page
+            let currentPage = parseInt(document.getElementById('currentPage').value);
+            // increment the current page
+            currentPage++;
+            // set the new page
+            document.getElementById('currentPage').value = currentPage;
+            // send the page to the server
+            window.location.href = '/quiz1?page=' + currentPage;
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar px-12 fixed z-[1]">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a href="/">Accueil</a></li>
+                        <li><a href="">À propos</a></li>
+                        <li><a href="/leçon">Leçon</a></li>
+                        <li><a href="/jeux">Jeux</a></li>
+                    </ul>
+                </div>
+                <a id="nav-title" class="btn btn-ghost text-xl text-white" href="/">CyberLearning</a>
+            </div>
+            <div class="navbar-center hidden lg:flex join">
+                <!-- <div class="bg-slate-400 rounded-full"> -->
+                <div id="nav-group" class="glass rounded-l-full rounded-r-full">
+                    <li class="btn btn-secondary join-item"><a href="/">Accueil</a></li>
+                    <li class="btn btn-secondary join-item"><a href="">À propos</a></li>
+                    <li class="btn btn-secondary join-item"><a href="/leçon">Leçon</a></li>
+                    <li class="btn btn-secondary join-item"><a href="/jeux">Jeux</a></li>
+                </div>
+                <li id='nav-btn-contact' class="rounded-full"></li>
+                <!-- <ul class="menu menu-horizontal px-1">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="propos.html">À propos</a></li>
+                    <li><a href="Leçon.html">Leçon</a></li>
+                    <li><a href="jeux.html">Jeux</a></li>
+                </ul> -->
+            </div>
+            <div class="navbar-end">
+                <a id="btn-contact" class="btn btn-primary">Nous contacter</a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div id="head_bg">
+            <div class="bg-black/40">
+                <div class="h-screen flex content-center flex-wrap justify-center">
+                    <div class="card glass w-2/5 shadow-xl">
+                        <div class="card-body">
+                            <div class="text-center text-white mb-10">
+                                <h1 class="text-5xl card-title font-bold">Quiz : Introduction à la Cybersécurité</h1>
+                            </div>
+
+                            <form class="text-white">
+                                <p class="mb-2">Avant de commencer, veuillez indiquer votre nom ou votre pseudo</p>
+                                <label class="form-control w-full max-w-xs mb-4">
+                                    <input type="text" placeholder="Ecrivez ici"
+                                        class="input input-bordered w-full max-w-xs" />
+                                </label>
+                                <h3 class="mb-2">Question {{i+1}}</h3>
+                                <strong>{{data[i].question}}</strong>
+
+                                {% for reponses in data[i].choices %}
+
+                                <div class="form-control">
+                                    <label class="label cursor-pointer flex justify-start ">
+                                        <input type="radio" name="radio-{{i}}"
+                                            class="radio checked:bg-gray-700 border-2 border-gray-700" />
+                                        <span class="label-text mx-2 text-white">{{reponses}}</span>
+                                    </label>
+                                </div>
+
+                                {% endfor %}
+                                <div class="card-actions justify-end">
+                                    <div class="join grid grid-cols-2">
+                                        <button onclick="" class="join-item btn btn-outline text-white bg-gray-500">Previous
+                                            page</button>
+                                        <button class="join-item btn btn-outline text-white bg-gray-500">Next</button>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="card-actions justify-end">
+                                    <input type="submit" class="btn" value="Envoyer les réponses">
+                                </div> -->
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
