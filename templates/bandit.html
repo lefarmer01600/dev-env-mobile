@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Bandit{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
+<script src="{{ url_for('static', filename='animation.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <main class="py-10">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold">Règles du jeu</h1>
+        </div>
+
+        <div class="text-left max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6">Note pour les débutants</h2>
+            <p class="mb-4">
+                Ce jeu, comme la plupart des autres jeux, est organisé en niveaux. 
+                Vous commencez au niveau 0 et essayez de le “battre” ou de le “terminer”. 
+                Finir un niveau donne des informations sur la manière de commencer le niveau suivant. 
+                Les pages de ce site pour “Niveau <X>” contiennent des informations sur la façon de commencer le niveau X à partir du niveau précédent.
+                Par exemple, la page pour le Niveau 1 contient des informations sur comment passer du Niveau 0 au Niveau 1. 
+                Tous les niveaux de ce jeu ont une page sur ce site, et ils sont tous liés dans le menu latéral à gauche de cette page.
+            </p>
+            <p class="mb-4">
+                Vous rencontrerez de nombreuses situations où vous ne saurez pas quoi faire. 
+                Ne paniquez pas ! Ne vous découragez pas ! 
+                Le but de ce jeu est de vous apprendre les bases.
+                Apprendre les bases inclut la lecture de nombreuses informations nouvelles. 
+                Si vous n'avez jamais utilisé la ligne de commande auparavant, une bonne première lecture serait cette <a href="lien-vers-intro-commands">introduction aux commandes utilisateur</a>.
+            </p>
+            <p class="mb-4">
+                Il y a plusieurs choses que vous pouvez essayer lorsque vous ne savez pas comment continuer :
+            </p>
+            <ul class="list-disc pl-6 mb-4">
+                <li>Si vous connaissez une commande mais ne savez pas comment l'utiliser, essayez le manuel (page man) en entrant <code>man &lt;commande&gt;</code>. Par exemple, <code>man ls</code> pour apprendre la commande “ls”. La commande “man” a aussi son propre manuel, essayez-le ! Lorsque vous utilisez <code>man</code>, appuyez sur <code>q</code> pour quitter (vous pouvez également utiliser <code>/</code>, <code>n</code> et <code>N</code> pour rechercher).</li>
+                <li>Si la commande n'a pas de page man, elle pourrait être une commande intégrée au shell. Dans ce cas, utilisez la commande <code>help &lt;X&gt;</code>. Par exemple, <code>help cd</code>.</li>
+                <li>Votre moteur de recherche préféré est aussi votre ami. Apprenez à l'utiliser ! Je recommande Google.</li>
+                <li>Enfin, si vous êtes toujours bloqué, vous pouvez nous rejoindre via le chat.</li>
+            </ul>
+            <p class="mb-4">
+                Vous êtes prêt à commencer ! Commencez par le Niveau 0. Bonne chance !
+            </p>
+    
+            <h2 class="text-3xl font-bold mt-8 mb-6">Note pour les machines virtuelles</h2>
+            <p class="mb-4">
+                Il est possible que vous ne puissiez pas vous connecter à overthewire.org via SSH en raison d'une erreur “broken pipe” lorsque l'adaptateur réseau de la machine virtuelle est configuré en mode NAT. Ajouter la ligne <code>IPQoS throughput</code> dans <code>/etc/ssh/ssh_config</code> devrait résoudre le problème. Si cela ne fonctionne pas, la seule option restante est de changer l’adaptateur en mode “Pont réseau” (Bridged mode).
+            </p>
+        </div>
+        
+    </main>
+{% endblock %}

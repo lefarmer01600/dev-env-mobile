@@ -30,6 +30,18 @@ def jeux():
 @app.route('/quiz')
 def quiz():
     global quiz_question
-    i = 0
+    i = 1
     # return render_template('home.html', question=question)
     return render_template('Quiz1.html', data=quiz_question["quiz"], i=i)
+
+@app.route('/test')
+def test():
+    return render_template('Setester.html')
+
+@app.route('/intro')
+def intro():
+    return render_template('Csecu.html')
+
+@app.route('/bandit')
+def bandit():
+    return render_template('bandit.html')
