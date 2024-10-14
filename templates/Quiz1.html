@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberLearning</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
+
+    <script>
+        // make a function to send page +1 to the server with get
+        function nextPage() {
+            // get the current page
+            let currentPage = parseInt(document.getElementById('currentPage').value);
+            // increment the current page
+            currentPage++;
+            // set the new page
+            document.getElementById('currentPage').value = currentPage;
+            // send the page to the server
+            window.location.href = '/quiz1?page=' + currentPage;
+        }
+    </script>
 </head>
 
 <body>
@@ -84,7 +98,7 @@
                                 {% endfor %}
                                 <div class="card-actions justify-end">
                                     <div class="join grid grid-cols-2">
-                                        <button class="join-item btn btn-outline text-white bg-gray-500">Previous
+                                        <button onclick="" class="join-item btn btn-outline text-white bg-gray-500">Previous
                                             page</button>
                                         <button class="join-item btn btn-outline text-white bg-gray-500">Next</button>
                                     </div>

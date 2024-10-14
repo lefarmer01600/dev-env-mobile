@@ -1,78 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr" data-theme="light">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberLearning</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
-</head>
+{% extends "base.html" %}
+{% block title %}CyberLearning{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
+<script src="{{ url_for('static', filename='animation.js') }}"></script>
+{% endblock %}
 
 <body>
-    <header>
-        <div class="navbar px-12 fixed z-[1]">
-            <div class="navbar-start">
-                <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
-                    </div>
-                    <ul tabindex="0"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        <li><a href="/">Accueil</a></li>
-                        <li><a href="">À propos</a></li>
-                        <li><a href="/leçon">Leçon</a></li>
-                        <li><a href="/jeux">Jeux</a></li>
-                    </ul>
-                </div>
-                <a id="nav-title" class="btn btn-ghost text-xl text-white" href="/">CyberLearning</a>
-            </div>
-            <div class="navbar-center hidden lg:flex join">
-                <!-- <div class="bg-slate-400 rounded-full"> -->
-                <div id="nav-group" class="glass rounded-l-full rounded-r-full">
-                    <li class="btn btn-secondary join-item"><a href="/">Accueil</a></li>
-                    <li class="btn btn-secondary join-item"><a href="">À propos</a></li>
-                    <li class="btn btn-secondary join-item"><a href="/leçon">Leçon</a></li>
-                    <li class="btn btn-secondary join-item"><a href="/jeux">Jeux</a></li>
-                </div>
-                <li id='nav-btn-contact' class="rounded-full"></li>
-                <!-- <ul class="menu menu-horizontal px-1">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="propos.html">À propos</a></li>
-                    <li><a href="Leçon.html">Leçon</a></li>
-                    <li><a href="jeux.html">Jeux</a></li>
-                </ul> -->
-            </div>
-            <div class="navbar-end">
-                <a id="btn-contact" class="btn btn-primary">Nous contacter</a>
-            </div>
-        </div>
-    </header>
 
-    <section>
-        <div id="head_bg">
-            <div class="bg-black/40">
-                <div class="h-screen content-center ml-28">
-                    <div class="card glass w-2/5 shadow-xl">
-                        <div class="card-body">
-                            <h2 class="card-title text-6xl text-white pb-10">Apprenez la cybersécurité, testez vos
-                                compétences.
-                            </h2>
-                            <p class="text-white text-xl pb-10">Explorez différents modules pour renforcer vos
-                                connaissances, mettez les à l'épreuve </p>
-                            <div class="card-actions justify-end">
-                                <a href="Setester.html"><button class="btn btn-primary">Se tester</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    {% block content %}
     <main class="py-10">
         <div class="text-center mb-12">
             <h1 class="text-5xl font-bold">Jeux</h1>
@@ -128,6 +63,7 @@
         </div>
         </div>
     </main>
+    {% endblock %}
 </body>
 
 </html>
