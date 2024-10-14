@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}results{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
+<script src="{{ url_for('static', filename='animation.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <main class="py-10">
+        <div class="text-center mb-12">
+        <h1 class="text-center text-5xl font-bold mt-10">Résultats du Quiz</h1>
+        </div>
+    
+        <div class="flex justify-center mt-20">
+            <div class="card glass w-2/5 shadow-xl">
+                <div class="card-body text-center text-black">
+                    <h2 class="text-4xl mb-10"> Votre score : {{ score }} / {{ total_questions }}</h2>
+                    <p class="text-3xl font-bold">{{ message }}</p>
+
+                    <div class="card-actions justify-center mt-10">
+                        <a href="/quiz" class="btn btn-outline bg-gray-500 text-white">Refaire le quiz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</html>
+{% endblock %}

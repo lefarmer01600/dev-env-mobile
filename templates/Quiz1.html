@@ -8,18 +8,26 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
 
     <script>
-        // make a function to send page +1 to the server with get
-        function nextPage() {
-            // get the current page
-            let currentPage = parseInt(document.getElementById('currentPage').value);
-            // increment the current page
-            currentPage++;
-            // set the new page
-            document.getElementById('currentPage').value = currentPage;
-            // send the page to the server
-            window.location.href = '/quiz1?page=' + currentPage;
+        function nextPage(currentPage) {
+            if (currentPage < "{{ data | length - 1 }}") {
+                currentPage++;
+                window.location.href = '/quiz?page=' + currentPage;
+            }
+        }
+    
+        function previousPage(currentPage) {
+            if (currentPage > 0) {
+                currentPage--;
+                window.location.href = '/quiz?page=' + currentPage;
+            }
+        }
+    
+        function showResults() {
+            // Redirige vers la page des résultats
+            window.location.href = '/results';
         }
     </script>
+        
 </head>
 
 <body>
@@ -80,7 +88,7 @@
                                 <p class="mb-2">Avant de commencer, veuillez indiquer votre nom ou votre pseudo</p>
                                 <label class="form-control w-full max-w-xs mb-4">
                                     <input type="text" placeholder="Ecrivez ici"
-                                        class="input input-bordered w-full max-w-xs" />
+                                        class="input input-bordered text-black w-full max-w-xs" />
                                 </label>
                                 <h3 class="mb-2">Question {{i+1}}</h3>
                                 <strong>{{data[i].question}}</strong>
@@ -98,11 +106,23 @@
                                 {% endfor %}
                                 <div class="card-actions justify-end">
                                     <div class="join grid grid-cols-2">
-                                        <button onclick="" class="join-item btn btn-outline text-white bg-gray-500">Previous
-                                            page</button>
-                                        <button class="join-item btn btn-outline text-white bg-gray-500">Next</button>
+                                        <!-- Bouton Précédente -->
+                                        <button type="button" class="join-item btn btn-outline text-white bg-gray-500"
+                                            onclick="previousPage('{{i}}')">Précédente</button>
+                                
+                                        <!-- Condition pour le bouton Prochaine ou Résultats -->
+                                        {% if i < data | length - 1 %}
+                                            <!-- Si on n'est pas à la dernière question, on affiche le bouton "Prochaine" -->
+                                            <button type="button" class="join-item btn btn-outline text-white bg-gray-500"
+                                                onclick="nextPage('{{i}}')">Prochaine</button>
+                                        {% else %}
+                                            <!-- Si c'est la dernière question, le bouton devient "Résultats" -->
+                                            <button type="button" class="join-item btn btn-outline text-white bg-gray-500"
+                                                onclick="showResults()">Résultats</button>
+                                        {% endif %}
                                     </div>
                                 </div>
+                                                           
 
                                 <!-- <div class="card-actions justify-end">
                                     <input type="submit" class="btn" value="Envoyer les réponses">
